@@ -19,7 +19,8 @@ const PageSix = lazy(() => import('src/pages/dashboard/six'));
 
 
 const Effectif = lazy(() => import('src/pages/dashboard/employes/index'));
-const Employe = lazy(() => import('src/pages/dashboard/employes/view'));
+const ViewEffectif = lazy(() => import('src/pages/dashboard/employes/view'));
+const AddEffectif = lazy(() => import('src/pages/dashboard/employes/add'));
 
 const Entreprises = lazy(() => import('src/pages/dashboard/entreprises/entreprises'));
 const AddEntreprise = lazy(() => import('src/pages/dashboard/entreprises/add'));
@@ -47,10 +48,11 @@ export const dashboardRoutes = [
     children: [
       { element: <IndexPage />, index: true },
       {
-        path: 'employes',
+        path: 'salaries',
         children: [
           { element: <Effectif />, index: true},
-          { element: <Employe />, path :':id/view'},
+          { element: <ViewEffectif />, path :':id/view'},
+          { element: <AddEffectif />, path :'add'},
         ]
       },
       {

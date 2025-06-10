@@ -45,8 +45,9 @@ export const paths = {
     root: ROOTS.DASHBOARD,
     
     employes: {
-      root: `${ROOTS.DASHBOARD}/employes`,
-      view: (id) => `${ROOTS.DASHBOARD}/employes/${id}/view`,
+      root: `${ROOTS.DASHBOARD}/salaries`,
+      view: (id) => `${ROOTS.DASHBOARD}/salaries/${id}/view`,
+      add: `${ROOTS.DASHBOARD}/salaries/add`,
     },
     entreprise: {
       root: `${ROOTS.DASHBOARD}/vos-entreprises`,

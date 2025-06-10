@@ -1,15 +1,18 @@
-import {
-  Button,
-  Card,
-  CardContent,
-  CardHeader,
-  Divider,
-  Typography,
-} from '@mui/material';
+import React, { useState, useCallback } from 'react';
+
 import Grid from '@mui/material/Unstable_Grid2';
-import React, { useCallback, useState } from 'react';
-import { UploadAvatar } from 'src/components/upload';
+import {
+  Card,
+  Button,
+  Divider,
+  CardHeader,
+  Typography,
+  CardContent,
+} from '@mui/material';
+
 import { fData } from 'src/utils/format-number';
+
+import { UploadAvatar } from 'src/components/upload';
 import { EmptyContent } from 'src/components/empty-content';
 
 export default function InfoEntrepriseView() {
@@ -19,8 +22,7 @@ export default function InfoEntrepriseView() {
     setAvatarUrl(newFile);
   }, []);
   return (
-    <>
-      <Grid container spacing={2}>
+    <Grid container spacing={2}>
         <Grid>
           <Card>
             <CardHeader
@@ -211,6 +213,5 @@ export default function InfoEntrepriseView() {
           </Card>
         </Grid>
       </Grid>
-    </>
   );
 }

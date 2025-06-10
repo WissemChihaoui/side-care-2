@@ -3,6 +3,7 @@ import React, { useState, useCallback  } from 'react';
 import { Tab, Menu, Tabs, Stack, Button, MenuItem, MenuList, IconButton } from '@mui/material';
 
 import { paths } from 'src/routes/paths';
+import { useRouter } from 'src/routes/hooks';
 
 import { useTabs } from 'src/hooks/use-tabs';
 
@@ -21,6 +22,7 @@ export const JOB_DETAILS_TABS = [
 ];
 export default function EffectifsListView() {
   const tabs = useTabs('effectif');
+  const router = useRouter()
   const popover = usePopover();
 
   const [isOpen, setOpen] = useState(null);
@@ -52,7 +54,14 @@ export default function EffectifsListView() {
         Ajouter
       </Button>
       <Menu id="simple-menu" anchorEl={isOpen} onClose={handleClose} open={!!isOpen}>
-        <MenuItem>Créer un employé</MenuItem>
+        <MenuItem
+            onClick={() => {
+              router.push(paths.dashboard.employes.add);
+              popover.onClose();
+            }}
+          >
+            Créer un employé
+          </MenuItem>
         <MenuItem>Réintégrer u ancien employé</MenuItem>
         <MenuItem>Générer un lien d&apos;invitation</MenuItem>
         <MenuItem>Importer mes employés via DSN</MenuItem>
