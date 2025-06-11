@@ -70,9 +70,22 @@ export default function EffectifsListView() {
         >
           Réintégrer un ancien employé
         </MenuItem>
-        <MenuItem>Générer un lien d&apos;invitation</MenuItem>
-        <MenuItem>Importer mes employés via DSN</MenuItem>
-        <MenuItem>Importer mes employés via fichiher excel</MenuItem>
+        <MenuItem
+          onClick={() => {
+            router.push(paths.dashboard.employes.link);
+            popover.onClose();
+          }}
+        >
+          Générer un lien d&apos;invitation
+        </MenuItem>
+        <MenuItem
+          onClick={() => {
+            router.push(paths.dashboard.employes.import);
+            popover.onClose();
+          }}
+        >
+          Importer mes employés via fichiher excel
+        </MenuItem>
       </Menu>
       <IconButton onClick={popover.onOpen}>
         <Iconify icon="eva:more-vertical-fill" />
@@ -129,7 +142,7 @@ export default function EffectifsListView() {
       />
       {renderTabs}
       {tabs.value === 'effectif' && <EffectifsList />}
-      {/* {tabs.value === 'statistiques' && <StatistiquesView />} //Didn't work on deployement */}
+      {tabs.value === 'statistiques' && <StatistiquesView />}
     </DashboardContent>
   );
 }

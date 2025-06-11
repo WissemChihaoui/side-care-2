@@ -1,15 +1,15 @@
+import { toast } from 'sonner';
 import React, { useMemo } from 'react';
 import { useForm } from 'react-hook-form';
 
 import Stack from '@mui/material/Stack';
-import { Card, Divider, CardHeader, Box, MenuItem, FormControlLabel, Switch } from '@mui/material';
+import { LoadingButton } from '@mui/lab';
+import { Box, Card, Switch, Divider, MenuItem, CardHeader, FormControlLabel } from '@mui/material';
 
+import { paths } from 'src/routes/paths';
 import { useRouter } from 'src/routes/hooks';
 
 import { Form, Field } from 'src/components/hook-form';
-import { LoadingButton } from '@mui/lab';
-import { toast } from 'sonner';
-import { paths } from 'src/routes/paths';
 
 const OPTIONS = [
   { value: 'option 1', label: 'Option 1' },

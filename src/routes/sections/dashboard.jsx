@@ -22,6 +22,9 @@ const Effectif = lazy(() => import('src/pages/dashboard/employes/index'));
 const ViewEffectif = lazy(() => import('src/pages/dashboard/employes/view'));
 const AddEffectif = lazy(() => import('src/pages/dashboard/employes/add'));
 const Reintegration = lazy(() => import('src/pages/dashboard/employes/reintegration'));
+const Reintegration2 = lazy(() => import('src/pages/dashboard/employes/reintegration-2'));
+const LinkGen = lazy(() => import('src/pages/dashboard/employes/link'));
+const Import = lazy(() => import('src/pages/dashboard/employes/import'));
 
 const Entreprises = lazy(() => import('src/pages/dashboard/entreprises/entreprises'));
 const AddEntreprise = lazy(() => import('src/pages/dashboard/entreprises/add'));
@@ -55,6 +58,9 @@ export const dashboardRoutes = [
           { element: <ViewEffectif />, path :':id/view'},
           { element: <AddEffectif />, path :'add'},
           { element: <Reintegration />, path :'reintegrer-1'},
+          { element: <Reintegration2 />, path :'reintegrer-2/:id'},
+          { element: <LinkGen />, path :'invitation_link'},
+          { element: <Import />, path :'importation'},
         ]
       },
       {
