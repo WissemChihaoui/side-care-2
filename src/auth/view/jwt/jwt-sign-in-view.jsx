@@ -76,7 +76,7 @@ export function JwtSignInView() {
 
   const renderForm = (
     <Box gap={3} display="flex" flexDirection="column">
-      <Field.Text name="email" label="Email address" InputLabelProps={{ shrink: true }} />
+      <Field.Text name="email" label="Email" InputLabelProps={{ shrink: true }} />
 
       <Box gap={1.5} display="flex" flexDirection="column">
         <Link
@@ -86,12 +86,12 @@ export function JwtSignInView() {
           color="inherit"
           sx={{ alignSelf: 'flex-end' }}
         >
-          Forgot password?
+          Mot de passe oublié?
         </Link>
 
         <Field.Text
           name="password"
-          label="Password"
+          label="Mot de passe"
           placeholder="6+ characters"
           type={password.value ? 'text' : 'password'}
           InputLabelProps={{ shrink: true }}
@@ -114,9 +114,9 @@ export function JwtSignInView() {
         type="submit"
         variant="contained"
         loading={isSubmitting}
-        loadingIndicator="Sign in..."
+        loadingIndicator="Se connecter..."
       >
-        Sign in
+        Se connecter
       </LoadingButton>
     </Box>
   );
@@ -124,23 +124,23 @@ export function JwtSignInView() {
   return (
     <>
       <FormHead
-        title="Sign in to your account"
+        title="Connexion à votre espace entreprise"
         description={
           <>
-            {`Don’t have an account? `}
+            {`Je n'ai pas encore un compte ? `}
             <Link component={RouterLink} href={paths.auth.jwt.signUp} variant="subtitle2">
-              Get started
+              Créer mon compte
             </Link>
           </>
         }
         sx={{ textAlign: { xs: 'center', md: 'left' } }}
       />
 
-      <Alert severity="info" sx={{ mb: 3 }}>
+      {/* <Alert severity="info" sx={{ mb: 3 }}>
         Use <strong>{defaultValues.email}</strong>
         {' with password '}
         <strong>{defaultValues.password}</strong>
-      </Alert>
+      </Alert> */}
 
       {!!errorMsg && (
         <Alert severity="error" sx={{ mb: 3 }}>
