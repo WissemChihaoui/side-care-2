@@ -46,7 +46,7 @@ export const navData = [
    * Overview
    */
   {
-    subheader: 'Overview 6.0.0',
+    subheader: 'Tableau de bord',
     items: [
       { title: 'Tableau de bord', path: paths.dashboard.root, icon: ICONS.dashboard },
       { title: 'SideStore', path: paths.dashboard.root, icon: ICONS.order },
@@ -106,7 +106,7 @@ export const navData = [
     subheader: 'Mon compte',
     items: [
       { title: 'Paramètres & Intégrations', path: paths.dashboard.group.five, icon: ICONS.parameter },
-      { title: 'Mon compte', path: paths.dashboard.group.five, icon: ICONS.user },
+      // { title: 'Mon compte', path: paths.dashboard.group.five, icon: ICONS.user },
       { title: "Centre d'aide", path: paths.dashboard.group.five, icon :ICONS.support },
     ],
   },

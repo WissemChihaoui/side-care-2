@@ -21,6 +21,7 @@ const PageSix = lazy(() => import('src/pages/dashboard/six'));
 const Effectif = lazy(() => import('src/pages/dashboard/employes/index'));
 const ViewEffectif = lazy(() => import('src/pages/dashboard/employes/view'));
 const AddEffectif = lazy(() => import('src/pages/dashboard/employes/add'));
+const Reintegration = lazy(() => import('src/pages/dashboard/employes/reintegration'));
 
 const Entreprises = lazy(() => import('src/pages/dashboard/entreprises/entreprises'));
 const AddEntreprise = lazy(() => import('src/pages/dashboard/entreprises/add'));
@@ -53,6 +54,7 @@ export const dashboardRoutes = [
           { element: <Effectif />, index: true},
           { element: <ViewEffectif />, path :':id/view'},
           { element: <AddEffectif />, path :'add'},
+          { element: <Reintegration />, path :'reintegrer-1'},
         ]
       },
       {

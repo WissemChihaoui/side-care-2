@@ -130,10 +130,10 @@ export function DashboardLayout({ sx, children, header, data }) {
                   />
                 )}
                 {/* -- Workspace popover -- */}
-                <WorkspacesPopover
+                {/* <WorkspacesPopover
                   data={_workspaces}
                   sx={{ color: 'var(--layout-nav-text-primary-color)' }}
-                />
+                /> */}
               </>
             ),
             rightArea: (
@@ -141,7 +141,7 @@ export function DashboardLayout({ sx, children, header, data }) {
                 {/* -- Searchbar -- */}
                 <Searchbar data={navData} />
                 {/* -- Language popover -- */}
-                <LanguagePopover
+                {/* <LanguagePopover
                   data={[
                     { value: 'en', label: 'English', countryCode: 'GB' },
                     { value: 'fr', label: 'French', countryCode: 'FR' },
@@ -149,7 +149,7 @@ export function DashboardLayout({ sx, children, header, data }) {
                     { value: 'cn', label: 'Chinese', countryCode: 'CN' },
                     { value: 'ar', label: 'Arabic', countryCode: 'SA' },
                   ]}
-                />
+                /> */}
                 {/* -- Notifications popover -- */}
                 <NotificationsDrawer data={_notifications} />
                 {/* -- Contacts popover -- */}

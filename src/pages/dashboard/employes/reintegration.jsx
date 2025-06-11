@@ -2,11 +2,11 @@ import { Helmet } from 'react-helmet-async';
 
 import { CONFIG } from 'src/config-global';
 
-import EffectifsListView from 'src/sections/dashboard/employes/effectifs/view/effectifs-list-view';
+import EffectifsReintegration1 from 'src/sections/dashboard/employes/effectifs/view/effectifs-reintegration-1';
 
 // ----------------------------------------------------------------------
 
-const metadata = { title: `Effectifs | Tableau de bord - ${CONFIG.appName}` };
+const metadata = { title: `Réintégration d’un ancien employé | Tableau de bord - ${CONFIG.appName}` };
 
 export default function Page() {
   return (
@@ -15,7 +15,7 @@ export default function Page() {
         <title> {metadata.title}</title>
       </Helmet>
 
-      <EffectifsListView />
+      <EffectifsReintegration1 />
     </>
   );
 }
