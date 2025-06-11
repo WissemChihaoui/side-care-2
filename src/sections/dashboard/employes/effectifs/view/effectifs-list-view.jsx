@@ -129,7 +129,7 @@ export default function EffectifsListView() {
       />
       {renderTabs}
       {tabs.value === 'effectif' && <EffectifsList />}
-      {tabs.value === 'statistiques' && <StatistiquesView />}
+      {/* {tabs.value === 'statistiques' && <StatistiquesView />} //Didn't work on deployement */}
     </DashboardContent>
   );
 }
