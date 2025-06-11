@@ -1,6 +1,9 @@
-import { Card, CardContent, CardHeader } from '@mui/material';
-import React, { useCallback, useState } from 'react';
+import React, { useState, useCallback } from 'react';
+
+import { Card, CardHeader, CardContent } from '@mui/material';
+
 import { ChartSelect } from 'src/components/chart';
+
 import { ChartLine } from '../chart-line';
 
 export default function NombreSalarieChart() {

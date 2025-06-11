@@ -1,5 +1,7 @@
-import { Card, CardContent, CardHeader, Typography } from '@mui/material';
 import React from 'react';
+
+import { Card, CardHeader, CardContent } from '@mui/material';
+
 import { ChartDonut } from '../chart-donut';
 
 export default function MoyenAge() {
