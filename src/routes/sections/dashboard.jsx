@@ -26,6 +26,11 @@ const Reintegration2 = lazy(() => import('src/pages/dashboard/employes/reintegra
 const LinkGen = lazy(() => import('src/pages/dashboard/employes/link'));
 const Import = lazy(() => import('src/pages/dashboard/employes/import'));
 
+const Equipes = lazy(() => import('src/pages/dashboard/equipes/index'));
+const DetailsEquipes = lazy(() => import('src/pages/dashboard/equipes/details'));
+const Trombinoscope = lazy(() => import('src/pages/dashboard/trombinoscope/index'));
+const Organigramme = lazy(() => import('src/pages/dashboard/equipes/organigramme'));
+
 const Entreprises = lazy(() => import('src/pages/dashboard/entreprises/entreprises'));
 const AddEntreprise = lazy(() => import('src/pages/dashboard/entreprises/add'));
 const ViewEntreprise = lazy(() => import('src/pages/dashboard/entreprises/view'));
@@ -62,6 +67,15 @@ export const dashboardRoutes = [
           { element: <LinkGen />, path :'invitation_link'},
           { element: <Import />, path :'importation'},
         ]
+      },
+      {
+        path: 'equipes',
+        children: [
+          { element: <Equipes />, index: true },
+          { element: <DetailsEquipes />, path: ':id/view' },
+          { element: <Organigramme />, path: 'organigramme' },
+          { element: <Trombinoscope />, path: 'trombinoscope' },
+        ],
       },
       {
         path: 'vos-entreprises',

@@ -57,6 +57,10 @@ export const navData = [
         children: [
           { title: 'Entreprises', path: paths.dashboard.entreprise.root},
           { title: 'Effectifs', path: paths.dashboard.employes.root},
+          { title: 'Équipe', path: paths.dashboard.equipes.root},
+          { title: 'Trombinoscope', path: paths.dashboard.equipes.tromb},
+          { title: 'Organigramme', path: paths.dashboard.equipes.org},
+          { title: 'Bilan social', path: paths.dashboard.three},
         ]
       },
       { 

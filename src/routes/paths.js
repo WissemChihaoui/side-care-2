@@ -53,6 +53,12 @@ export const paths = {
       link: `${ROOTS.DASHBOARD}/salaries/invitation_link`,
       import: `${ROOTS.DASHBOARD}/salaries/importation`,
     },
+    equipes: {
+      root: `${ROOTS.DASHBOARD}/equipes`,
+      org: `${ROOTS.DASHBOARD}/equipes/organigramme`,
+      tromb: `${ROOTS.DASHBOARD}/equipes/trombinoscope`,
+      view: (id) => `${ROOTS.DASHBOARD}/equipes/${id}/view`
+    },
     entreprise: {
       root: `${ROOTS.DASHBOARD}/vos-entreprises`,
       addEntreprise: `${ROOTS.DASHBOARD}/vos-entreprises/add`,
